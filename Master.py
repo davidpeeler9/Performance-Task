@@ -37,16 +37,16 @@ PrimalityTest(int(InputNumber))
 IsPerfectSquare(int(InputNumber))
 PrimeFactorization()
 
-if Prime == 0:
-	print("% is not a prime number") % InputNumber
-else:
-	print("% is a prime number") % InputNumber
+#if Prime == 0:
+#	print("% is not a prime number") % InputNumber
+#else:
+#	print("% is a prime number") % InputNumber
 
 
-if PerfectSquare == 0:
-	print("% is not a perfect square") % InputNumber
-else:
-	print("% is a perfect square") % InputNumber
+#if PerfectSquare == 0:
+#	print("% is not a perfect square") % InputNumber
+#else:
+#	print("% is a perfect square") % InputNumber
 
 
-print("%'s prime factorization is %") % (InputNumber, PFList)
+#print("%'s prime factorization is %") % (InputNumber, PFList)
