@@ -14,7 +14,7 @@ InputNumber = input("What number would you like to test?")
 
 def PrimalityTest(y):
   for num in range(1, y):
-    if InputNumber%num == 0:
+    if int(InputNumber)%num == 0:
       DivisorsList.append(num)
   return
 
@@ -26,17 +26,16 @@ def IsPerfectSquare(x):
   return
 
 def PrimeFactorization(): #TODO, change the divisible factors of PFList to primes
-	if IsPrime == 0:
-		PFList == DevisorsList
+	if Prime == 0:
+		PFList == DivisorsList
 	else:
-	for item in PFList:
-		PrimalityTest(item)
+		for item in PFList:
+				PrimalityTest(item)
 	return
 
-PrimalityTest(InputNumber)
-IsPerfectSquare(InputNumber)
+PrimalityTest(int(InputNumber))
+IsPerfectSquare(int(InputNumber))
 PrimeFactorization()
-
 
 if Prime == 0:
 	print("% is not a prime number") % InputNumber
@@ -51,4 +50,3 @@ else:
 
 
 print("%'s prime factorization is %") % (InputNumber, PFList)
-
