@@ -29,8 +29,8 @@ def PrimeFactorization(): #TODO, change the divisible factors of PFList to prime
 	if IsPrime == 0:
 		PFList == DevisorsList
 	else:
-		for item in PFList:
-				PrimalityTest(item)
+	for item in PFList:
+		PrimalityTest(item)
 	return
 
 PrimalityTest(InputNumber)
