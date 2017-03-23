@@ -50,6 +50,7 @@ def PrimeFactorization(): #TODO, change the divisible factors of PFList to prime
   return
 
 # 5. Tests of y is a CircularPrime
+# TODO basically everything
 def CircularPrime():
   return
 
