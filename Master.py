@@ -2,6 +2,7 @@
 # BaseChanger
 # PrimeFactorization
 # Doesnt repeat to menu indefinately
+# Doesnt check if the menu input is 1-5
 #
 # Finished:
 # Menu
@@ -9,7 +10,15 @@
 # PerfectSquare
 import math
 
-# 1. Finds factors that does not include 1 or y
+# Use in PrimeFactorization and CircularPrime?
+def isPrime(x):
+  for num in range(2, x//2):
+    if x%num == 0:
+      break
+  else:
+    return
+
+# 1. Finds factors that does not include 1 or y //done
 def FindTrueFactors():
 	y = int(input("What number would you like to test?"))
 	for num in range(2, math.ceil(math.sqrt(y))):
@@ -40,6 +49,10 @@ def PrimeFactorization(): #TODO, change the divisible factors of PFList to prime
   y = int()
   return
 
+# 5. Tests of y is a CircularPrime
+def CircularPrime():
+  return
+
 # Menu
 def Menu():
   print("Welcome to the BONEZONE")
@@ -47,6 +60,7 @@ def Menu():
   print("2. Base Changer")
   print("3. Perfect Square?")
   print("4. Prime Factorization")
+  print("5. Circular Prime?")
 
   choice = input("Choose an option:")
 
@@ -58,7 +72,9 @@ def Menu():
     IsPerfectSquare()
   if choice == "4":
     PrimeFactorization()
-  return
+  if choice == "5":
+    CircularPrime()
+    return
 
 #Need it to repeat back to menu if user prompts
 
