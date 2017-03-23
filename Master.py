@@ -1,12 +1,12 @@
 # TODO:
 # BaseChanger
 # PrimeFactorization
-# PerfectSquare
+# Doesnt repeat to menu indefinately
 #
 # Finished:
 # Menu
 # PrimalityTest
-#
+# PerfectSquare
 import math
 
 # 1. Finds factors that does not include 1 or y
@@ -20,27 +20,25 @@ def FindTrueFactors():
 # 2. Changes the base of y
 # TODO basically everything
 def BaseChanger():
+  y = int(input("What number would you like to test?"))
+  x = int(input("What base is your starting number?"))
+  z = int(input("What base would you like to change into?"))
   return
 
 # 3. Finds the perfect square of y, if it is a whole number, then outputs that it is a perfect square
-# TODO basically everything
 def IsPerfectSquare():
   y = int(input("What number would you like to test?"))
-  if math.sqrt()%1 == 0:
-    print(y + "is a perfect square")
+  if math.sqrt(y)%1 == 0:
+    print(str(y) + " is a perfect square, and its root is " + str(int(math.sqrt(y))))
   else:
-      PerfectSquare = 0
+    print(str(y) + " is not a perfect square")
   return
 
 # 4. Finds the Prime Factors of y
 # TODO basically everything
 def PrimeFactorization(): #TODO, change the divisible factors of PFList to primes
-	if Prime == 0:
-		PFList == DivisorsList
-	else:
-		for item in PFList:
-				PrimalityTest()
-	return
+  y = int()
+  return
 
 # Menu
 def Menu():
@@ -61,6 +59,8 @@ def Menu():
   if choice == "4":
     PrimeFactorization()
   return
+
+#Need it to repeat back to menu if user prompts
 
 Menu()
 
