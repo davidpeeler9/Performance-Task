@@ -5,7 +5,7 @@ PerfectSquare = 0
 DivisorsList = []
 PFList = []
 
-InputNumber = input("What number would you like to test?")
+InputNumber = int(input("What number would you like to test?"))
 
 #while True:
 #  InputNumber = input("What number would you like to test?")
@@ -13,9 +13,9 @@ InputNumber = input("What number would you like to test?")
 #	  break
 
 def PrimalityTest(y):
-  for num in range(1, y):
-    if int(InputNumber)%num == 0:
-      DivisorsList.append(num)
+	for num in range(1, y/2):
+    if InputNumber%num == 0:
+      print n, "equals", num, "*" int(InputNumber)/num
   return
 
 def IsPerfectSquare(x):
@@ -46,7 +46,7 @@ else:
 	print("%c is a prime number") % InputNumber
 
 
-if PerfectSquare == 0:
+if PerfectSquare == 0:	
 	print("%c is not a perfect square") % InputNumber
 else:
 	print("%c is a perfect square") % InputNumber
