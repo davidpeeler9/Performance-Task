@@ -1,55 +1,72 @@
+# TODO:
+# BaseChanger
+# PrimeFactorization
+# PerfectSquare
+#
+# Finished:
+# Menu
+# PrimalityTest
+#
 import math
 
-Prime = 0
-PerfectSquare = 0
-DivisorsList = []
-PFList = []
+# 1. Finds factors that does not include 1 or y
+def FindTrueFactors():
+	y = int(input("What number would you like to test?"))
+	for num in range(2, math.ceil(math.sqrt(y))):
+	  if y % num == 0:
+	    print(str(y) + " equals " + str(num) + " times " + str(y//num))
+	return
 
-InputNumber = int(input("What number would you like to test?"))
-
-#while True:
-#  InputNumber = input("What number would you like to test?")
-#  if isinstance(InputNumber, int) == True:
-#	  break
-
-def PrimalityTest(y):
-	for num in range(1, y/2):
-    if InputNumber%num == 0:
-      print n, "equals", num, "*" int(InputNumber)/num
+# 2. Changes the base of y
+# TODO basically everything
+def BaseChanger():
   return
 
-def IsPerfectSquare(x):
-  if math.sqrt(x)%2 == 0:
-    PerfectSquare = 1
+# 3. Finds the perfect square of y, if it is a whole number, then outputs that it is a perfect square
+# TODO basically everything
+def IsPerfectSquare():
+  y = int(input("What number would you like to test?"))
+  if math.sqrt()%1 == 0:
+    print(y + "is a perfect square")
   else:
       PerfectSquare = 0
   return
 
+# 4. Finds the Prime Factors of y
+# TODO basically everything
 def PrimeFactorization(): #TODO, change the divisible factors of PFList to primes
 	if Prime == 0:
 		PFList == DivisorsList
 	else:
 		for item in PFList:
-				PrimalityTest(item)
+				PrimalityTest()
 	return
 
-PrimalityTest(int(InputNumber))
-IsPerfectSquare(int(InputNumber))
-PrimeFactorization()
+# Menu
+def Menu():
+  print("Welcome to the BONEZONE")
+  print("1. Find True Factors")
+  print("2. Base Changer")
+  print("3. Perfect Square?")
+  print("4. Prime Factorization")
 
+  choice = input("Choose an option:")
 
-#Right Characters for the prints?
+  if choice == "1":
+    FindTrueFactors()
+  if choice == "2":
+    BaseChanger()
+  if choice == "3":
+    IsPerfectSquare()
+  if choice == "4":
+    PrimeFactorization()
+  return
 
-if Prime == 0:
-	print("%c is not a prime number") % InputNumber
+Menu()
+
+choice2 = input("Would you like to run another test?")
+if choice2 == "yes":
+  Menu()
 else:
-	print("%c is a prime number") % InputNumber
-
-
-if PerfectSquare == 0:	
-	print("%c is not a perfect square") % InputNumber
-else:
-	print("%c is a perfect square") % InputNumber
-
-
-print("%c's prime factorization is %c") % (InputNumber, PFList)
+  print("Bye Bye!")
+  
