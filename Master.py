@@ -1,14 +1,20 @@
 # TODO:
 # BaseChanger
 # PrimeFactorization
-# Doesnt repeat to menu indefinately
 # Doesnt check if the menu input is 1-5
+# Clear the console after every test
 #
 # Finished:
 # Menu
 # PrimalityTest
 # PerfectSquare
+# Doesnt repeat to menu indefinately
 import math
+import os
+
+def cls():
+  os.system('cls' if os.name=='nt' else 'clear')
+  return
 
 # Use in PrimeFactorization and CircularPrime?
 def isPrime(x):
@@ -45,13 +51,14 @@ def IsPerfectSquare():
 
 # 4. Finds the Prime Factors of y
 # TODO basically everything
-def PrimeFactorization(): #TODO, change the divisible factors of PFList to primes
-  y = int()
+def PrimeFactorization(): 
+  y = int(input("What number would you like to test?"))
   return
 
 # 5. Tests of y is a CircularPrime
 # TODO basically everything
 def CircularPrime():
+  y = int(input("What number would you like to test?"))
   return
 
 # Menu
@@ -75,15 +82,13 @@ def Menu():
     PrimeFactorization()
   if choice == "5":
     CircularPrime()
-    return
+  
+  choice2 = input("Would you like to run another test?")
+  if choice2 == "yes":
+    Menu()
+  else:
+    print("Bye Bye!")
 
-#Need it to repeat back to menu if user prompts
+  return
 
 Menu()
-
-choice2 = input("Would you like to run another test?")
-if choice2 == "yes":
-  Menu()
-else:
-  print("Bye Bye!")
-  
