@@ -24,9 +24,14 @@ def isPrime(x):
   else:
     return True
 
-def SplitNumber(x)
+def SplitNumber(x):
+  x = string(x)
+  for x in len(x):
+    
+  DigitList = []
   for digit in range(len.x):
     
+    return
 
 # 1. Finds factors that does not include 1 or y //done
 def FindTrueFactors():
