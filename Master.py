@@ -24,6 +24,8 @@ def isPrime(x):
   else:
     return True
 
+
+# Splits x into a list of digits
 def SplitNumber(x):
   x = string(x)
   for x in len(x):
