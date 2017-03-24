@@ -83,6 +83,9 @@ def Menu():
   if choice == "5":
     CircularPrime()
   
+  
+  cls()
+	
   choice2 = input("Would you like to run another test?")
   if choice2 == "yes":
     Menu()
