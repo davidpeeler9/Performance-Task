@@ -44,7 +44,7 @@ def BaseChanger():
 def IsPerfectSquare():
   y = int(input("What number would you like to test?"))
   if math.sqrt(y)%1 == 0:
-    print(str(y) + " is a perfect square, and its root is " + str(int(math.sqrt(y))))
+    print(str(y) + " is a perfect square, and its root is " + str(math.sqrt(y)))
   else:
     print(str(y) + " is not a perfect square")
   return
