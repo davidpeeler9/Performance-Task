@@ -20,9 +20,13 @@ def cls():
 def isPrime(x):
   for num in range(2, x//2):
     if x%num == 0:
-      break
+      return False
   else:
-    return
+    return True
+
+def SplitNumber(x)
+  for digit in range(len.x):
+    
 
 # 1. Finds factors that does not include 1 or y //done
 def FindTrueFactors():
@@ -58,7 +62,15 @@ def PrimeFactorization():
 # 5. Tests of y is a CircularPrime
 # TODO basically everything
 def CircularPrime():
-  y = int(input("What number would you like to test?"))
+  y = input("What number would you like to test?")
+  InputList = []
+  SplitNumber(y)
+  
+    
+    
+  
+  
+  
   return
 
 # Menu
