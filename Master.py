@@ -3,7 +3,6 @@
 # PrimeFactorization
 # Doesnt check if the menu input is 1-5
 # Clear the console after every test
-# Doesnt repeat to menu indefinately
 
 # Finished:
 # Menu
@@ -81,7 +80,6 @@ def CircularPrime():
 
 # Menu
 def Menu():
-  print("Welcome to the BONEZONE")
   print("1. Find True Factors")
   print("2. Base Changer")
   print("3. Perfect Square?")
@@ -102,7 +100,7 @@ def Menu():
     CircularPrime()
   
   choice2 = input("Would you like to run another test?")
-  if choice2 == "yes":
+  if choice2 == "yes" or "ye" or "y":
     Menu()
   else:
     print("Bye Bye!")
