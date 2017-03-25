@@ -39,12 +39,15 @@ def SplitNumber(x):
 
 def FindTrueFactors():
 	y = int(input("What number would you like to test?"))
+	if isPrime(y) is True:
+	  print(str(y) + " has no true factors other than 1 and itself.")
+	
 	for num in range(2, math.ceil(math.sqrt(y))):
 	  if y % num == 0:
 	    print(str(y) + " equals " + str(num) + " times " + str(y//num))
 	return
 
-def BaseChanger():
+def BaseChanger(): #TODO
   y = int(input("What number would you like to test?"))
   x = int(input("What base is your starting number?"))
   z = int(input("What base would you like to change into?"))
@@ -58,12 +61,14 @@ def IsPerfectSquare():
     print(str(y) + " is not a perfect square")
   return
 
-def PrimeFactorization(): 
+def PrimeFactorization(): #TODO
   y = int(input("What number would you like to test?"))
   
   # Testing if it is prime --> true factors would be its PrimeFactorization
   if isPrime(y) is True:
     print("The prime factorization for this number is 1 and " + str(y))
+  
+  
   
 def CircularPrime():
   y = int(input("What number would you like to test?"))
@@ -100,7 +105,7 @@ def Menu():
     CircularPrime()
   
   choice2 = input("Would you like to run another test?")
-  if choice2 == "yes" or "ye" or "y":
+  if choice2 == "yes":
     Menu()
   else:
     print("Bye Bye!")
