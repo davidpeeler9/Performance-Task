@@ -1,8 +1,7 @@
 # TODO:
 # BaseChanger
 # PrimeFactorization
-# Doesnt check if the menu input is 1-5
-# Clear the console after every test
+# Clear the console after every test (probably a console issue?)
 
 # Finished:
 # Menu
@@ -10,6 +9,7 @@
 # SplitNumber
 # PerfectSquare
 # CircularPrime
+# Doesnt check if the menu input is 1-5
 
 import math
 import os
@@ -19,7 +19,17 @@ def cls():
   os.system('cls' if os.name=='nt' else 'clear')
   return
 
-def isPrime(x):
+def findLowestFactor(y): #Finds lowest factor + adjecent factor
+  z = 0
+  for item in range(2, int(y)/2):
+    if y/item % 1 == 0:
+      x = item
+      z == y/item
+      print(x)
+      print(y)
+      return list(x, z)
+
+def isPrime(x): # TEST THIS TO SEE IF IT ACTUALLY WORKS
   FactorList = []
   x = int(x)
   for num in range(2, math.ceil(x//2)):
@@ -47,11 +57,11 @@ def FindTrueFactors():
 	    print(str(y) + " equals " + str(num) + " times " + str(y//num))
 	return
 
-def BaseChanger(): #TODO
+def BaseChanger(): #TODO l
   y = int(input("What number would you like to test?"))
   x = int(input("What base is your starting number?"))
   z = int(input("What base would you like to change into?"))
-  return #TODO #TODO
+  return 
 
 def IsPerfectSquare():
   y = int(input("What number would you like to test?"))
@@ -61,14 +71,17 @@ def IsPerfectSquare():
     print(str(y) + " is not a perfect square")
   return
 
-def PrimeFactorization(): #TODO
+def PrimeFactorization(): # SEE isPrime
   y = int(input("What number would you like to test?"))
   
-  # Testing if it is prime --> true factors would be its PrimeFactorization
-  if isPrime(y) is True:
-    print("The prime factorization for this number is 1 and " + str(y))
-  
-  
+  factorList = [y] #Start out with the inputted interger
+  for item in factorList: #Have this repeat till all the items in the array are prime
+    if isPrime is False: #If this item is not a prime
+      factorList.append(findLowestFactor(item)) #Add the list of factors into factorList
+      factorList.extend(findLowestFactor(item)) #Extend the list so that its not a list
+      factorList.remove(item) #Remove that item from the list since it has already been broken down
+  print(factorList)
+  return 
   
 def CircularPrime():
   y = int(input("What number would you like to test?"))
@@ -92,7 +105,11 @@ def Menu():
   print("5. Circular Prime?")
 
   choice = input("Choose an option:")
-
+  
+  if 1 > int(choice) or 5 < int(choice):
+    print("Please choose a valid option.")
+    cls()
+    Menu()
   if choice == "1":
     FindTrueFactors()
   if choice == "2":
