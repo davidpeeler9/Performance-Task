@@ -1,10 +1,9 @@
 # TODO:
-# BaseChanger
-# PrimeFactorization
 # Clear the console after every test (probably a console issue?)
 
 # Finished:
 # Menu
+# PrimeFactorization
 # PrimalityTest
 # SplitNumber
 # PerfectSquare
@@ -19,17 +18,13 @@ def cls():
   os.system('cls' if os.name=='nt' else 'clear')
   return
 
-def findLowestFactor(y): #Finds lowest factor + adjecent factor
-  z = 0
-  for item in range(2, int(y)/2):
+def findLowestFactor(y): #Finds lowest factor + corresponding factor
+  for item in range(2, int(y)//2):
     if y/item % 1 == 0:
-      x = item
-      z == y/item
-      print(x)
-      print(y)
-      return list(x, z)
+      resultingList = [item, y//item]
+      return resultingList
 
-def isPrime(x): # TEST THIS TO SEE IF IT ACTUALLY WORKS
+def isPrime(x):
   FactorList = []
   x = int(x)
   for num in range(2, math.ceil(x//2)):
@@ -57,12 +52,6 @@ def FindTrueFactors():
 	    print(str(y) + " equals " + str(num) + " times " + str(y//num))
 	return
 
-def BaseChanger(): #TODO l
-  y = int(input("What number would you like to test?"))
-  x = int(input("What base is your starting number?"))
-  z = int(input("What base would you like to change into?"))
-  return 
-
 def IsPerfectSquare():
   y = int(input("What number would you like to test?"))
   if math.sqrt(y)%1 == 0:
@@ -71,17 +60,16 @@ def IsPerfectSquare():
     print(str(y) + " is not a perfect square")
   return
 
-def PrimeFactorization(): # SEE isPrime
+def PrimeFactorization(): 
   y = int(input("What number would you like to test?"))
-  
+
   factorList = [y] #Start out with the inputted interger
   for item in factorList: #Have this repeat till all the items in the array are prime
-    if isPrime is False: #If this item is not a prime
-      factorList.append(findLowestFactor(item)) #Add the list of factors into factorList
-      factorList.extend(findLowestFactor(item)) #Extend the list so that its not a list
+    if isPrime(item) is False: #If this item is not a prime
+      factorList.extend(findLowestFactor(item)) #Insert/Extend the list so that its not a list
       factorList.remove(item) #Remove that item from the list since it has already been broken down
   print(factorList)
-  return 
+  return
   
 def CircularPrime():
   y = int(input("What number would you like to test?"))
@@ -99,26 +87,23 @@ def CircularPrime():
 # Menu
 def Menu():
   print("1. Find True Factors")
-  print("2. Base Changer")
-  print("3. Perfect Square?")
-  print("4. Prime Factorization")
-  print("5. Circular Prime?")
+  print("2. Perfect Square?")
+  print("3. Prime Factorization")
+  print("4. Circular Prime?")
 
   choice = input("Choose an option:")
   
-  if 1 > int(choice) or 5 < int(choice):
+  if 1 > int(choice) or 4 < int(choice):
     print("Please choose a valid option.")
     cls()
     Menu()
   if choice == "1":
     FindTrueFactors()
   if choice == "2":
-    BaseChanger()
-  if choice == "3":
     IsPerfectSquare()
-  if choice == "4":
+  if choice == "3":
     PrimeFactorization()
-  if choice == "5":
+  if choice == "4":
     CircularPrime()
   
   choice2 = input("Would you like to run another test?")
