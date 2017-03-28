@@ -13,8 +13,10 @@
 import math
 import os
 import itertools
+import time
 
 def cls():
+	time.wait(3)
   os.system('cls' if os.name=='nt' else 'clear')
   return
 
@@ -108,6 +110,7 @@ def Menu():
   
   choice2 = input("Would you like to run another test?")
   if choice2 == "yes":
+		cls()
     Menu()
   else:
     print("Bye Bye!")
