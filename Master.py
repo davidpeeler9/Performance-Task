@@ -85,7 +85,6 @@ def CircularPrime():
   return
 
 
-
 # Menu
 def Menu():
   print("1. Find True Factors")
