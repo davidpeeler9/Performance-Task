@@ -1,15 +1,3 @@
-# TODO:
-# Clear the console after every test (probably a console issue?)
-
-# Finished:
-# Menu
-# PrimeFactorization
-# PrimalityTest
-# SplitNumber
-# PerfectSquare
-# CircularPrime
-# Doesnt check if the menu input is 1-5
-
 import math
 import os
 import itertools
@@ -84,8 +72,6 @@ def CircularPrime():
     print(str(y) + " is a circular prime.")
   return
 
-
-# Menu
 def Menu():
   print("1. Find True Factors")
   print("2. Perfect Square?")
@@ -113,8 +99,6 @@ def Menu():
     Menu()
   else:
     print("Bye Bye!")
-
   return
-
 
 Menu()
