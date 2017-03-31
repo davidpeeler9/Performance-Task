@@ -1,12 +1,5 @@
 import math
-import os
 import itertools
-import time
-
-def cls():
-	time.wait(3)
-  os.system('cls' if os.name=='nt' else 'clear')
-  return
 
 def findLowestFactor(y): #Finds lowest factor + corresponding factor
   for item in range(2, int(y)//2):
@@ -24,13 +17,6 @@ def isPrime(x):
     return True
   else:
     return False
-
-def SplitNumber(x):
-  x = str(x)
-  DigitList = []
-  for y in range(len(x)):
-    DigitList.insert(1, (x[y]))
-  return DigitList
 
 def FindTrueFactors():
 	y = int(input("What number would you like to test?"))
@@ -82,7 +68,6 @@ def Menu():
   
   if 1 > int(choice) or 4 < int(choice):
     print("Please choose a valid option.")
-    cls()
     Menu()
   if choice == "1":
     FindTrueFactors()
@@ -95,7 +80,6 @@ def Menu():
   
   choice2 = input("Would you like to run another test?")
   if choice2 == "yes":
-		cls()
     Menu()
   else:
     print("Bye Bye!")
